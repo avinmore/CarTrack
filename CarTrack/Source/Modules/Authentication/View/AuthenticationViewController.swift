@@ -8,6 +8,7 @@
 import UIKit
 class AuthenticationViewController: UIViewController {
     @IBOutlet weak var loginActionButton: BaseButton!
+    @IBOutlet weak var selectCountryActionButton: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userNameErrorText: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -15,8 +16,9 @@ class AuthenticationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginActionButton.loadData("Login", isDisabled: true, cornerRadius: 8)
+        configureUI()
     }
-
-
+    func configureUI() {
+        loginActionButton.loadData("Login", buttonType: .submit, isDisabled: true, cornerRadius: 8)        
+    }
 }

@@ -6,26 +6,53 @@
 //
 import UIKit
 class BaseButton: UIButton {
+    enum ButtonType {
+        case submit
+        case selection
+        case none
+    }
+    public var buttonActionType: ButtonType = .none
     public var isDisabled: Bool {
         set {
             isUserInteractionEnabled = !newValue
             switch newValue {
             case false:
-                backgroundColor = .enabledButtonBG
-                setTitleColor(.enabledButtonTxt, for: .normal)
+                switch buttonActionType {
+                case .submit:
+                    backgroundColor = .enabledButtonBG
+                    setTitleColor(.enabledButtonTxt, for: .normal)
+                case .selection:
+                    backgroundColor = .selectionEnabledButtonBG
+                    setTitleColor(.selectionEnabledButtonTxt, for: .normal)
+                    layer.borderWidth = 1.0
+                    layer.borderColor = UIColor.selectionDisabledButtonTxt.cgColor
+                case .none: break
+                }
+                
             case true:
-                backgroundColor = .disabledButtonBG
-                setTitleColor(.disabledButtonTxt, for: .normal)
+                switch buttonActionType {
+                case .submit:
+                    backgroundColor = .disabledButtonBG
+                    setTitleColor(.disabledButtonTxt, for: .normal)
+                case .selection:
+                    backgroundColor = .selectionDisabledButtonBG
+                    setTitleColor(.selectionDisabledButtonTxt, for: .normal)
+                    layer.borderWidth = 1.0
+                    layer.borderColor = UIColor.selectionDisabledButtonTxt.cgColor
+                case .none: break
+                }
+                
             }
         }
         get {
             return isUserInteractionEnabled
         }
     }
-    func loadData(_ text: String? = "", isDisabled: Bool = false,  cornerRadius: CGFloat = 0) {
+    func loadData(_ text: String? = "", buttonType: ButtonType = .none, isDisabled: Bool = false,  cornerRadius: CGFloat = 0) {
         setTitleColor(.enabledButtonTxt, for: .normal)
         setTitle(text, for: .normal)
         layer.cornerRadius = cornerRadius
+        buttonActionType = buttonType
         self.isDisabled = isDisabled
     }
 }
@@ -37,6 +64,12 @@ extension UIColor {
     open class var enabledButtonBG: UIColor { hexToColor("81673F") }
     open class var disabledButtonTxt: UIColor { hexToColor("282828") }
     open class var enabledButtonTxt: UIColor { hexToColor("FFFFFF") }
+    
+    open class var selectionEnabledButtonTxt: UIColor { hexToColor("A37C3C") }
+    open class var selectionEnabledButtonBG: UIColor { .clear }
+    open class var selectionDisabledButtonTxt: UIColor { hexToColor("AD9C7F") }
+    open class var selectionDisabledButtonBG: UIColor { hexToColor("DEDEDE") }
+    
     
     @objc convenience init?(red: Int, green: Int, blue: Int, transparency: CGFloat = 1) {
         guard red >= 0 && red <= 255 else { return nil }

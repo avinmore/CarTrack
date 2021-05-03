@@ -14,6 +14,11 @@
 		BCF47AD0263FE83400ACBC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF47ACF263FE83400ACBC4D /* Assets.xcassets */; };
 		BCF47AD3263FE83400ACBC4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF47AD1263FE83400ACBC4D /* LaunchScreen.storyboard */; };
 		BCF47ADE263FE83400ACBC4D /* CarTrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47ADD263FE83400ACBC4D /* CarTrackTests.swift */; };
+		BCF47B12263FEEEF00ACBC4D /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47B11263FEEEF00ACBC4D /* AuthenticationViewController.swift */; };
+		BCF47B16263FEF3E00ACBC4D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47B15263FEF3E00ACBC4D /* AuthenticationViewModel.swift */; };
+		BCF47B1C263FF62100ACBC4D /* CustomShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47B1B263FF62100ACBC4D /* CustomShadowView.swift */; };
+		BCF47B202640003800ACBC4D /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47B1F2640003800ACBC4D /* BaseButton.swift */; };
+		BCF47B2526401B3400ACBC4D /* CountryListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47B2426401B3400ACBC4D /* CountryListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		BCF47AD9263FE83400ACBC4D /* CarTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF47ADD263FE83400ACBC4D /* CarTrackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTrackTests.swift; sourceTree = "<group>"; };
 		BCF47ADF263FE83400ACBC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF47B11263FEEEF00ACBC4D /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		BCF47B15263FEF3E00ACBC4D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		BCF47B1B263FF62100ACBC4D /* CustomShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShadowView.swift; sourceTree = "<group>"; };
+		BCF47B1F2640003800ACBC4D /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		BCF47B2426401B3400ACBC4D /* CountryListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		BCF47AFF263FE8A500ACBC4D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BCF47B19263FF5FC00ACBC4D /* Shared */,
 				BCF47B04263FE8D500ACBC4D /* Modules */,
 				BCF47B03263FE8BB00ACBC4D /* AppDelegate */,
 			);
@@ -137,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				BCF47AC7263FE83100ACBC4D /* ViewController.swift */,
+				BCF47B11263FEEEF00ACBC4D /* AuthenticationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 		BCF47B07263FE90200ACBC4D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BCF47B15263FEF3E00ACBC4D /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +166,32 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BCF47B19263FF5FC00ACBC4D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BCF47B2326401B1100ACBC4D /* Unility */,
+				BCF47B1A263FF60500ACBC4D /* CustomView */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BCF47B1A263FF60500ACBC4D /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BCF47B1B263FF62100ACBC4D /* CustomShadowView.swift */,
+				BCF47B1F2640003800ACBC4D /* BaseButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		BCF47B2326401B1100ACBC4D /* Unility */ = {
+			isa = PBXGroup;
+			children = (
+				BCF47B2426401B3400ACBC4D /* CountryListManager.swift */,
+			);
+			path = Unility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF47B12263FEEEF00ACBC4D /* AuthenticationViewController.swift in Sources */,
+				BCF47B16263FEF3E00ACBC4D /* AuthenticationViewModel.swift in Sources */,
 				BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */,
+				BCF47B202640003800ACBC4D /* BaseButton.swift in Sources */,
 				BCF47AC8263FE83100ACBC4D /* ViewController.swift in Sources */,
 				BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */,
+				BCF47B2526401B3400ACBC4D /* CountryListManager.swift in Sources */,
+				BCF47B1C263FF62100ACBC4D /* CustomShadowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
