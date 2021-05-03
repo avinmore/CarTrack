@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC7F150426402D0200B615D7 /* TextfiledDisabledAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F150326402D0200B615D7 /* TextfiledDisabledAction.swift */; };
 		BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */; };
 		BCF47AC8263FE83100ACBC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC7263FE83100ACBC4D /* ViewController.swift */; };
 		BCF47ACB263FE83100ACBC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF47AC9263FE83100ACBC4D /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC7F150326402D0200B615D7 /* TextfiledDisabledAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfiledDisabledAction.swift; sourceTree = "<group>"; };
 		BCF47AC0263FE83100ACBC4D /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF47AC7263FE83100ACBC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				BCF47B1B263FF62100ACBC4D /* CustomShadowView.swift */,
 				BCF47B1F2640003800ACBC4D /* BaseButton.swift */,
+				BC7F150326402D0200B615D7 /* TextfiledDisabledAction.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				BCF47B202640003800ACBC4D /* BaseButton.swift in Sources */,
 				BCF47AC8263FE83100ACBC4D /* ViewController.swift in Sources */,
 				BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */,
+				BC7F150426402D0200B615D7 /* TextfiledDisabledAction.swift in Sources */,
 				BCF47B2526401B3400ACBC4D /* CountryListManager.swift in Sources */,
 				BCF47B1C263FF62100ACBC4D /* CustomShadowView.swift in Sources */,
 			);
