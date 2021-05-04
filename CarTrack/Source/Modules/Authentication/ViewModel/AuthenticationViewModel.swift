@@ -8,6 +8,7 @@ import Foundation
 enum TextFiledType: Int {
     case userName
     case password
+    case selection
 }
 /// Authentication view's  viewMode, responsible for handling all data, auth logic and validations.
 class AuthenticationViewModel {
@@ -30,6 +31,12 @@ class AuthenticationViewModel {
             updateLoginButtonStatus?(status)
         }
     }
+    var selectedCountry: String? {
+        didSet {
+            let status = validateInput(textfiledType: .selection)
+            updateLoginButtonStatus?(status)
+        }
+    }
     var updateLoginButtonStatus: (([(isValid: Bool, type: TextFiledType)]) -> Void)?
     var loginButtonStatus = [(isValid: Bool, type: TextFiledType)]()
     func validateInput(textfiledType: TextFiledType) -> [(Bool, TextFiledType)] {
@@ -44,6 +51,12 @@ class AuthenticationViewModel {
                 loginButtonStatus.append((isValid: true, type: .password))
             } else {
                 loginButtonStatus.append((isValid: false, type: .password))
+            }
+        case .selection:
+            if let country = self.selectedCountry, !country.isEmpty {
+                loginButtonStatus.append((isValid: true, type: .selection))
+            } else {
+                loginButtonStatus.append((isValid: false, type: .selection))
             }
         }
         return loginButtonStatus

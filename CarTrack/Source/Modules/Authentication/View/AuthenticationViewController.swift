@@ -27,6 +27,7 @@ class AuthenticationViewController: UIViewController {
                 return
             }
             self?.countryPickerTextField.text = country
+            self?.viewModel.selectedCountry = country
             self?.view.endEditing(true)
         }
         userNameTextField.delegate = self
@@ -45,8 +46,9 @@ class AuthenticationViewController: UIViewController {
                             self?.userNameErrorText.isHidden = result.isValid
                         case TextFiledType.password:
                             self?.passwordErrorText.isHidden = result.isValid
+                        case TextFiledType.selection: break
                         }
-                        if !result.isValid || results.count != 2 {
+                        if !result.isValid || results.count != 3 {
                             self?.loginActionButton.loadStatus(isDisabled: true)
                         }
                     }
