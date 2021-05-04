@@ -17,6 +17,7 @@ class DashboardViewController: UIViewController {
         }
         viewModel.fetchUsers()
         tableView.reloadData()
+        title = "Contacts"
     }
 }
 extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {

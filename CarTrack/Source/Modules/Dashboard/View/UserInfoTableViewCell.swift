@@ -29,13 +29,13 @@ class UserInfoTableViewCell: UITableViewCell {
             longitude: Double(user.address.geo.lng) ?? 0)
         let location = CTAnnotation(coordinate: coord, title: user.name, subtitle: user.address.description())
         userGeoLocation.addAnnotation(location)
-        userGeoLocation.showAnnotations([location], animated: true)
+        userGeoLocation.showAnnotations([location], animated: false)
         userName.loadData(user.name, textColor: .white, pointSize: 17, weight: .bold)
-        userEmail.loadData(user.email, textColor: .black, pointSize: 15, weight: .regular)
-        userPhone.loadData(user.phone, textColor: .black, pointSize: 15, weight: .regular)
-        userWebsite.loadData(user.website, textColor: .black, pointSize: 15, weight: .regular)
-        userCompany.loadData(user.company.description(), textColor: .black, pointSize: 15, weight: .regular)
-        userAddress.loadData(user.address.description(), textColor: .black, pointSize: 15, weight: .regular)
+        userEmail.loadData(user.email, textColor: .userDetailsTxtColot, pointSize: 15, weight: .regular)
+        userPhone.loadData(user.phone, textColor: .userDetailsTxtColot, pointSize: 15, weight: .regular)
+        userWebsite.loadData(user.website, textColor: .userDetailsTxtColot, pointSize: 15, weight: .regular)
+        userCompany.loadData(user.company.description(), textColor: .userDetailsTxtColot, pointSize: 15, weight: .regular)
+        userAddress.loadData(user.address.description(), textColor: .userDetailsTxtColot, pointSize: 15, weight: .regular)
     }
 }
 extension UserInfoTableViewCell {

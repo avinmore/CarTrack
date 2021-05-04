@@ -72,6 +72,7 @@ extension UIColor {
     open class var selectionEnabledButtonBG: UIColor { .clear }
     open class var selectionDisabledButtonTxt: UIColor { hexToColor("AD9C7F") }
     open class var selectionDisabledButtonBG: UIColor { hexToColor("DEDEDE") }
+    open class var userDetailsTxtColot: UIColor { hexToColor("866637") }
     
     
     @objc convenience init?(red: Int, green: Int, blue: Int, transparency: CGFloat = 1) {
