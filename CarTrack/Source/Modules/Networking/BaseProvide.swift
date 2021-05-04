@@ -18,6 +18,24 @@ open class BaseProvider<Target>: MoyaProvider<Target> where Target: TargetType {
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
+            //All API errors can be handled here
+            var errorString = ""
+            switch result {
+            case let .success(moyaResp):
+                if !moyaResp.data.isEmpty {
+                    errorString = "Error while fetching data"
+                }
+            case let .failure(error):
+                errorString = error.localizedDescription
+            }
+            if !errorString.isEmpty {
+                let alertController = UIAlertController(title: "", message: errorString, preferredStyle: .alert)
+                UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                    alertController.dismiss(animated: true, completion: nil)
+                })
+                alertController.addAction(action)
+            }
             completion(result)
         }
     }
