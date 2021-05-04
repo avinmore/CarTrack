@@ -55,6 +55,9 @@ class BaseButton: UIButton {
         buttonActionType = buttonType
         self.isDisabled = isDisabled
     }
+    public func loadStatus(isDisabled: Bool = false) {
+        self.isDisabled = isDisabled
+    }
 }
 public func hexToColor(_ color: String) -> UIColor {
     UIColor(hex: Int(color, radix: 16) ?? Int("000000", radix: 16)!)!

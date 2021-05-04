@@ -36,6 +36,7 @@ class AuthenticationViewController: UIViewController {
         viewModel.updateLoginButtonStatus = { [weak self] results in
             self?.userNameErrorText.isHidden = true
             self?.passwordErrorText.isHidden = true
+            self?.loginActionButton.loadStatus(isDisabled: false)
             if !results.isEmpty {
                 DispatchQueue.main.async {
                     results.forEach { result in
@@ -44,6 +45,9 @@ class AuthenticationViewController: UIViewController {
                             self?.userNameErrorText.isHidden = result.isValid
                         case TextFiledType.password:
                             self?.passwordErrorText.isHidden = result.isValid
+                        }
+                        if !result.isValid || results.count != 2 {
+                            self?.loginActionButton.loadStatus(isDisabled: true)
                         }
                     }
                 }

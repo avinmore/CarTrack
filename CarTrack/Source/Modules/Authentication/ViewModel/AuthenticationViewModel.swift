@@ -37,11 +37,14 @@ class AuthenticationViewModel {
         case .userName:
             let isValid = userName?.isValidUserName() ?? false
             loginButtonStatus = loginButtonStatus.filter({ $0.type != .userName})
-            if !isValid { loginButtonStatus.append((isValid: isValid, type: .userName)) }
+            loginButtonStatus.append((isValid: isValid, type: .userName))
         case .password:
-            let isValid = !(self.password?.isEmpty ?? true)
             loginButtonStatus = loginButtonStatus.filter({ $0.type != .password})
-            if !isValid { loginButtonStatus.append((isValid: isValid, type: .password)) }
+            if let pass = self.password, pass.count > 5 {
+                loginButtonStatus.append((isValid: true, type: .password))
+            } else {
+                loginButtonStatus.append((isValid: false, type: .password))
+            }
         }
         return loginButtonStatus
     }
