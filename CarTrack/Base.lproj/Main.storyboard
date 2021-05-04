@@ -263,6 +263,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="hfo-vA-fxi" id="sCR-Vc-RD7"/>
                         <outlet property="countryPickerTextField" destination="BMI-NY-JnD" id="8OY-93-zXV"/>
                         <outlet property="loginActionButton" destination="kCC-bB-cxT" id="YvV-Ve-CVw"/>
                         <outlet property="passwordErrorText" destination="Ovu-cA-7WT" id="4Wn-Ql-NSN"/>

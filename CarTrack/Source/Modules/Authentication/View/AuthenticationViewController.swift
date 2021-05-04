@@ -14,13 +14,17 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var userNameErrorText: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordErrorText: UILabel!
-    
+    @IBOutlet weak var containerView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        containerView.transformViewAnimation()
+    }
     func configureUI() {
-        loginActionButton.loadData("Login", buttonType: .submit, isDisabled: false, cornerRadius: 8)
+        loginActionButton.loadData("Login", buttonType: .submit, isDisabled: true, cornerRadius: 8)
         countryPickerTextField.setCountryPickerView { [weak self] selectedCountry in
             guard let country = selectedCountry else {
                 self?.view.endEditing(true)
@@ -67,10 +71,6 @@ class AuthenticationViewController: UIViewController {
             }
             AppDelegate.setRootController(UINavigationController(rootViewController: dashboard))
         }
-        guard let dashboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController else {
-            return
-        }
-        AppDelegate.setRootController(UINavigationController(rootViewController: dashboard))
     }
 }
 extension AuthenticationViewController: UITextFieldDelegate {

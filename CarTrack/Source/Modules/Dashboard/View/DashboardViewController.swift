@@ -18,6 +18,16 @@ class DashboardViewController: UIViewController {
         viewModel.fetchUsers {}
         tableView.reloadData()
         title = "Contacts"
+        addLogout()
+    }
+    func addLogout() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+    }
+    @objc func logout() {
+        guard let authView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthenticationViewController") as? AuthenticationViewController else {
+            return
+        }
+        AppDelegate.setRootController(UINavigationController(rootViewController: authView))
     }
 }
 extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
