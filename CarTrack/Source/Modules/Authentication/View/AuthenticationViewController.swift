@@ -57,6 +57,16 @@ class AuthenticationViewController: UIViewController {
         }
     }
     @IBAction func loginButtonTapped(_ sender: BaseButton) {
+        viewModel.performLogin { sucess, message in
+            guard sucess && message.isEmpty else {
+                Utility.showAlert("Failed to login!", message: message)
+                return
+            }
+            guard let dashboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController else {
+                return
+            }
+            AppDelegate.setRootController(UINavigationController(rootViewController: dashboard))
+        }
         guard let dashboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController else {
             return
         }

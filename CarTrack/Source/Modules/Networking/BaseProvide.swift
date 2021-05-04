@@ -22,19 +22,14 @@ open class BaseProvider<Target>: MoyaProvider<Target> where Target: TargetType {
             var errorString = ""
             switch result {
             case let .success(moyaResp):
-                if !moyaResp.data.isEmpty {
+                if moyaResp.data.isEmpty {
                     errorString = "Error while fetching data"
                 }
             case let .failure(error):
                 errorString = error.localizedDescription
             }
             if !errorString.isEmpty {
-                let alertController = UIAlertController(title: "", message: errorString, preferredStyle: .alert)
-                UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
-                let action = UIAlertAction(title: "Ok", style: .default, handler: { (_) in
-                    alertController.dismiss(animated: true, completion: nil)
-                })
-                alertController.addAction(action)
+                Utility.showAlert("", message: errorString)             
             }
             completion(result)
         }

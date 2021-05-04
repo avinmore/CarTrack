@@ -317,9 +317,6 @@
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="YES"/>
-                                                                            </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
@@ -361,9 +358,6 @@
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
-                                                                                    <userDefinedRuntimeAttributes>
-                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="YES"/>
-                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
@@ -384,9 +378,6 @@
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
-                                                                                    <userDefinedRuntimeAttributes>
-                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="YES"/>
-                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
@@ -407,9 +398,6 @@
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
-                                                                                    <userDefinedRuntimeAttributes>
-                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="YES"/>
-                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
@@ -433,9 +421,6 @@
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
-                                                                                    <userDefinedRuntimeAttributes>
-                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="YES"/>
-                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
@@ -459,9 +444,6 @@
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
-                                                                                    <userDefinedRuntimeAttributes>
-                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isShadowOnText" value="YES"/>
-                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>

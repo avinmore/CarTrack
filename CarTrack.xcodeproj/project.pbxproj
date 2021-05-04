@@ -19,6 +19,10 @@
 		BC7F153C264129C400B615D7 /* CTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F153B264129C300B615D7 /* CTUser.swift */; };
 		BC7F154126412D1200B615D7 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = BC7F154026412D1200B615D7 /* users.json */; };
 		BC7F154626412D1D00B615D7 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = BC7F154026412D1200B615D7 /* users.json */; };
+		BC7F155426416ADF00B615D7 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F155326416ADF00B615D7 /* DatabaseManager.swift */; };
+		BC7F15722641718200B615D7 /* LoginUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15702641718200B615D7 /* LoginUser+CoreDataProperties.swift */; };
+		BC7F15732641718200B615D7 /* LoginUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15712641718200B615D7 /* LoginUser+CoreDataClass.swift */; };
+		BC7F15772641735600B615D7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15762641735600B615D7 /* Utility.swift */; };
 		BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */; };
 		BCF47ACB263FE83100ACBC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF47AC9263FE83100ACBC4D /* Main.storyboard */; };
 		BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF47ACC263FE83100ACBC4D /* CarTrack.xcdatamodeld */; };
@@ -56,6 +60,10 @@
 		BC7F1537264127CA00B615D7 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		BC7F153B264129C300B615D7 /* CTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUser.swift; sourceTree = "<group>"; };
 		BC7F154026412D1200B615D7 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		BC7F155326416ADF00B615D7 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		BC7F15702641718200B615D7 /* LoginUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BC7F15712641718200B615D7 /* LoginUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BC7F15762641735600B615D7 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		BCF47AC0263FE83100ACBC4D /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF47ACA263FE83100ACBC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +166,25 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		BC7F1549264169BA00B615D7 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BC7F154C26416A2E00B615D7 /* Authentication */,
+				BCF47ACC263FE83100ACBC4D /* CarTrack.xcdatamodeld */,
+				BC7F155326416ADF00B615D7 /* DatabaseManager.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		BC7F154C26416A2E00B615D7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BC7F15712641718200B615D7 /* LoginUser+CoreDataClass.swift */,
+				BC7F15702641718200B615D7 /* LoginUser+CoreDataProperties.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		BCF47AB7263FE83100ACBC4D = {
 			isa = PBXGroup;
 			children = (
@@ -182,11 +209,11 @@
 			isa = PBXGroup;
 			children = (
 				BCF47AFF263FE8A500ACBC4D /* Source */,
+				BC7F1549264169BA00B615D7 /* DataBase */,
 				BCF47AC9263FE83100ACBC4D /* Main.storyboard */,
 				BCF47ACF263FE83400ACBC4D /* Assets.xcassets */,
 				BCF47AD1263FE83400ACBC4D /* LaunchScreen.storyboard */,
 				BCF47AD4263FE83400ACBC4D /* Info.plist */,
-				BCF47ACC263FE83100ACBC4D /* CarTrack.xcdatamodeld */,
 			);
 			path = CarTrack;
 			sourceTree = "<group>";
@@ -286,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				BCF47B2426401B3400ACBC4D /* CountryListManager.swift */,
+				BC7F15762641735600B615D7 /* Utility.swift */,
 			);
 			path = Unility;
 			sourceTree = "<group>";
@@ -474,7 +502,11 @@
 				BC7F15322641273700B615D7 /* BaseProvide.swift in Sources */,
 				BC7F1538264127CA00B615D7 /* DashboardService.swift in Sources */,
 				BC7F153C264129C400B615D7 /* CTUser.swift in Sources */,
+				BC7F15772641735600B615D7 /* Utility.swift in Sources */,
 				BC7F15142640DE3B00B615D7 /* DashboardViewController.swift in Sources */,
+				BC7F15722641718200B615D7 /* LoginUser+CoreDataProperties.swift in Sources */,
+				BC7F15732641718200B615D7 /* LoginUser+CoreDataClass.swift in Sources */,
+				BC7F155426416ADF00B615D7 /* DatabaseManager.swift in Sources */,
 				BCF47B16263FEF3E00ACBC4D /* AuthenticationViewModel.swift in Sources */,
 				BC7F151E2640DFEC00B615D7 /* UserInfoTableViewCell.swift in Sources */,
 				BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */,

@@ -62,6 +62,14 @@ class AuthenticationViewModel {
         }
         return loginButtonStatus
     }
+    func performLogin(callback: ((Bool, String) -> Void)) {
+        guard let userId = userName, let pass = password else { return }
+        if DatabaseManager.checkForUser(userId, pass) != nil {
+            callback(true, "")
+        } else {
+            callback(false, "Please check user name, passsword and try again.")
+        }
+    }
 }
 extension String {
     func isValidUserName() -> Bool {
