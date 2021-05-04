@@ -23,6 +23,9 @@
 		BC7F15722641718200B615D7 /* LoginUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15702641718200B615D7 /* LoginUser+CoreDataProperties.swift */; };
 		BC7F15732641718200B615D7 /* LoginUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15712641718200B615D7 /* LoginUser+CoreDataClass.swift */; };
 		BC7F15772641735600B615D7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15762641735600B615D7 /* Utility.swift */; };
+		BC7F157B2641799400B615D7 /* CTAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F157A2641799400B615D7 /* CTAnnotation.swift */; };
+		BC7F157F264179EE00B615D7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F157E264179EE00B615D7 /* Extensions.swift */; };
+		BC7F158326417A3100B615D7 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F158226417A3100B615D7 /* Provider.swift */; };
 		BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */; };
 		BCF47ACB263FE83100ACBC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF47AC9263FE83100ACBC4D /* Main.storyboard */; };
 		BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF47ACC263FE83100ACBC4D /* CarTrack.xcdatamodeld */; };
@@ -64,6 +67,9 @@
 		BC7F15702641718200B615D7 /* LoginUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BC7F15712641718200B615D7 /* LoginUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC7F15762641735600B615D7 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		BC7F157A2641799400B615D7 /* CTAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAnnotation.swift; sourceTree = "<group>"; };
+		BC7F157E264179EE00B615D7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BC7F158226417A3100B615D7 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		BCF47AC0263FE83100ACBC4D /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF47ACA263FE83100ACBC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			children = (
 				BC7F15132640DE3B00B615D7 /* DashboardViewController.swift */,
 				BC7F151D2640DFEC00B615D7 /* UserInfoTableViewCell.swift */,
+				BC7F157A2641799400B615D7 /* CTAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				BC7F15312641273700B615D7 /* BaseProvide.swift */,
+				BC7F158226417A3100B615D7 /* Provider.swift */,
 				BC7F1537264127CA00B615D7 /* DashboardService.swift */,
 			);
 			path = Networking;
@@ -259,7 +267,6 @@
 		BCF47B05263FE8E000ACBC4D /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				BCF47B08263FE91A00ACBC4D /* Model */,
 				BCF47B07263FE90200ACBC4D /* ViewModel */,
 				BCF47B06263FE8F700ACBC4D /* View */,
 			);
@@ -280,13 +287,6 @@
 				BCF47B15263FEF3E00ACBC4D /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BCF47B08263FE91A00ACBC4D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		BCF47B19263FF5FC00ACBC4D /* Shared */ = {
@@ -314,6 +314,7 @@
 			children = (
 				BCF47B2426401B3400ACBC4D /* CountryListManager.swift */,
 				BC7F15762641735600B615D7 /* Utility.swift */,
+				BC7F157E264179EE00B615D7 /* Extensions.swift */,
 			);
 			path = Unility;
 			sourceTree = "<group>";
@@ -497,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF47B12263FEEEF00ACBC4D /* AuthenticationViewController.swift in Sources */,
+				BC7F158326417A3100B615D7 /* Provider.swift in Sources */,
 				BC7F151A2640DE5500B615D7 /* DashboardViewModel.swift in Sources */,
 				BC7F15222641072900B615D7 /* Lable.swift in Sources */,
 				BC7F15322641273700B615D7 /* BaseProvide.swift in Sources */,
@@ -509,12 +511,14 @@
 				BC7F155426416ADF00B615D7 /* DatabaseManager.swift in Sources */,
 				BCF47B16263FEF3E00ACBC4D /* AuthenticationViewModel.swift in Sources */,
 				BC7F151E2640DFEC00B615D7 /* UserInfoTableViewCell.swift in Sources */,
+				BC7F157F264179EE00B615D7 /* Extensions.swift in Sources */,
 				BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */,
 				BCF47B202640003800ACBC4D /* BaseButton.swift in Sources */,
 				BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */,
 				BC7F150426402D0200B615D7 /* Textfiled.swift in Sources */,
 				BCF47B2526401B3400ACBC4D /* CountryListManager.swift in Sources */,
 				BCF47B1C263FF62100ACBC4D /* CustomShadowView.swift in Sources */,
+				BC7F157B2641799400B615D7 /* CTAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

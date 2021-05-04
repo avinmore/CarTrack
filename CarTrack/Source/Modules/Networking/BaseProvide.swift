@@ -43,10 +43,3 @@ open class BaseProvider<Target>: MoyaProvider<Target> where Target: TargetType {
         return manager
     }
 }
-class Provider {
-    public static let dashboardService = BaseProvider<DashboardService>(
-        //        stubClosure: MoyaProvider.immediatelyStub,
-        manager: BaseProvider<DashboardService>.customManager()
-        //        ,plugins: [NetworkLoggerPlugin(verbose: true)]
-    )
-}

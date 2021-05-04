@@ -59,11 +59,3 @@ extension CountryListManager:  UIPickerViewDelegate, UIPickerViewDataSource, UIT
         selectedCountry = CountryListManager.shared.countryData[row]
     }
 }
-extension UITextField {
-    func setCountryPickerView(_ callback:((String?) -> Void)?) {
-        CountryListManager.shared.loadCountryData()
-        inputView = CountryListManager.shared.fetchPickerView()
-        inputAccessoryView = CountryListManager.shared.fetchToolbar()
-        CountryListManager.shared.didSelectCountry = callback
-    }
-}

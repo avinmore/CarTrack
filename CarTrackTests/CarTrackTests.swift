@@ -4,30 +4,52 @@
 //
 //  Created by Avin More on 3/5/21.
 //
-
 import XCTest
+import Moya
 @testable import CarTrack
-
 class CarTrackTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewModel = AuthenticationViewModel()
+    let dashboardViewModel = DashboardViewModel()
+    let mockDashboardService = BaseProvider<DashboardService>(
+        stubClosure: MoyaProvider.immediatelyStub, //This enables mocking to avoid internet call for testing APIs
+        manager: BaseProvider<DashboardService>.customManager()
+    )
+    func testCountryList() {
+        XCTAssertFalse(viewModel.countryList.isEmpty, "Country names are unavailable")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testValidateInput() {
+        viewModel.userName = "test@test.test"
+        _ = viewModel.validateInput(textfiledType: .userName)
+        viewModel.password = "testtest"
+        _ = viewModel.validateInput(textfiledType: .password)
+        viewModel.selectedCountry = "Singapore"
+        _ = viewModel.validateInput(textfiledType: .selection)
+        XCTAssertTrue(viewModel.loginButtonStatus.filter({ !$0.isValid }).first == nil, "Invalid input")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testValidUserId() {
+        XCTAssertTrue("test@test.test".isValidUserName(), "is valid user function has issue")
+        XCTAssertFalse("test@test".isValidUserName(), "is valid user function has issue")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testUpdateButtonStatus() {
+        viewModel.updateLoginButtonStatus = { result in
+            XCTAssertTrue(result.last?.isValid == true, "Login could not be enabled")
         }
+        viewModel.userName = "test@test.test"
+        _ = viewModel.validateInput(textfiledType: .userName)
+        viewModel.password = "testtest"
+        _ = viewModel.validateInput(textfiledType: .password)
+        viewModel.selectedCountry = "Singapore"
+        _ = viewModel.validateInput(textfiledType: .selection)
     }
-
+    func testFetchUsers() {
+        let exp = expectation(description: "Fetch mock user data")
+        dashboardViewModel.service = mockDashboardService
+        dashboardViewModel.users?.removeAll()
+        dashboardViewModel.fetchUsers() { [weak self] in
+            if self?.dashboardViewModel.users?.count == 10 {
+                exp.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 2)
+    }
 }

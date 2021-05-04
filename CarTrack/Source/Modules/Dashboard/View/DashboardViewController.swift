@@ -15,7 +15,7 @@ class DashboardViewController: UIViewController {
                 self?.tableView.reloadData()
             }
         }
-        viewModel.fetchUsers()
+        viewModel.fetchUsers {}
         tableView.reloadData()
         title = "Contacts"
     }
