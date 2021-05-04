@@ -287,50 +287,68 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserInfoTableViewCell" id="lHW-m8-WgQ" customClass="UserInfoTableViewCell" customModule="CarTrack" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="500.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="574"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lHW-m8-WgQ" id="BtF-XN-CMD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="500.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsD-Kb-Oj2" customClass="CustomShadowView" customModule="CarTrack" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="25" width="374" height="465.5"/>
+                                                    <rect key="frame" x="20" y="25" width="374" height="539"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-5I-yam" customClass="CustomShadowView" customModule="CarTrack" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-jJ-0he">
+                                                                    <rect key="frame" x="16" y="0.0" width="358" height="45"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rH-F9-7bn">
+                                                                            <rect key="frame" x="0.0" y="14" width="50" height="17"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="zxE-LW-6JN"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oua-AN-DcK" customClass="Label" customModule="CarTrack" customModuleProvider="target">
+                                                                            <rect key="frame" x="70" y="12.5" width="288" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.26666666666666666" green="0.29803921568627451" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="KaF-4i-c8g"/>
+                                                                <constraint firstAttribute="trailing" secondItem="bY1-jJ-0he" secondAttribute="trailing" id="QL4-id-4Tj"/>
+                                                                <constraint firstItem="bY1-jJ-0he" firstAttribute="leading" secondItem="Eh2-5I-yam" secondAttribute="leading" constant="16" id="bWV-qe-QvY"/>
+                                                                <constraint firstItem="bY1-jJ-0he" firstAttribute="top" secondItem="Eh2-5I-yam" secondAttribute="top" id="u6D-9p-xNv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="bY1-jJ-0he" secondAttribute="bottom" id="uMF-b0-4TI"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cropTop">
+                                                                    <real key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G90-Tr-Rdn">
-                                                            <rect key="frame" x="16" y="16" width="342" height="428"/>
+                                                            <rect key="frame" x="16" y="65" width="342" height="454"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-XO-IfV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="223"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="212"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-jJ-0he">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2EW-6q-2qX">
                                                                             <rect key="frame" x="0.0" y="0.0" width="342" height="20.5"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rH-F9-7bn" customClass="Label" customModule="CarTrack" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="zxE-LW-6JN"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oua-AN-DcK" customClass="Label" customModule="CarTrack" customModuleProvider="target">
-                                                                                    <rect key="frame" x="70" y="0.0" width="272" height="20.5"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2EW-6q-2qX">
-                                                                            <rect key="frame" x="0.0" y="40.5" width="342" height="20.5"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNG-re-Jgd" customClass="Label" customModule="CarTrack" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNG-re-Jgd">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="PJz-qJ-wDO"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -343,14 +361,14 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ftH-NT-XE4">
-                                                                            <rect key="frame" x="0.0" y="81" width="342" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="40.5" width="342" height="20.5"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-gc-ze6" customClass="Label" customModule="CarTrack" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-gc-ze6">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="20.5"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Ehj-b6-npj"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -363,14 +381,14 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zvn-hW-62n">
-                                                                            <rect key="frame" x="0.0" y="121.5" width="342" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="81" width="342" height="20.5"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alH-z9-VNT" customClass="Label" customModule="CarTrack" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alH-z9-VNT">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="AJ1-YS-9qC"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -383,14 +401,14 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aKS-ZT-VOc">
-                                                                            <rect key="frame" x="0.0" y="162" width="342" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="121.5" width="342" height="20.5"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vH-Ix-eri" customClass="Label" customModule="CarTrack" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vH-Ix-eri">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="N7H-4c-iw6"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -403,19 +421,22 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9ic-cI-NLX">
-                                                                            <rect key="frame" x="0.0" y="202.5" width="342" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="162" width="342" height="50"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lat-N8-p6f" customClass="Label" customModule="CarTrack" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lat-N8-p6f">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="ykB-y4-vKp"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUO-ww-Gzn" customClass="Label" customModule="CarTrack" customModuleProvider="target">
-                                                                                    <rect key="frame" x="90" y="0.0" width="252" height="20.5"/>
+                                                                                    <rect key="frame" x="90" y="0.0" width="252" height="50"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="50" id="6ek-bs-FJt"/>
+                                                                                    </constraints>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -424,11 +445,20 @@
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geo Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-5H-6Uz">
+                                                                    <rect key="frame" x="0.0" y="232" width="342" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xqD-sg-diJ">
-                                                                    <rect key="frame" x="0.0" y="243" width="342" height="185"/>
+                                                                    <rect key="frame" x="0.0" y="269" width="342" height="185"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="185" id="Z0j-3s-sHZ"/>
                                                                     </constraints>
+                                                                    <connections>
+                                                                        <outlet property="delegate" destination="N3x-7D-olP" id="Pjg-5z-kbV"/>
+                                                                    </connections>
                                                                 </mapView>
                                                             </subviews>
                                                         </stackView>
@@ -437,8 +467,11 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="G90-Tr-Rdn" secondAttribute="trailing" constant="16" id="0ag-68-B6y"/>
                                                         <constraint firstItem="G90-Tr-Rdn" firstAttribute="leading" secondItem="AsD-Kb-Oj2" secondAttribute="leading" constant="16" id="1P3-Y8-tRz"/>
-                                                        <constraint firstItem="G90-Tr-Rdn" firstAttribute="top" secondItem="AsD-Kb-Oj2" secondAttribute="top" constant="16" id="eQN-rB-hhU"/>
-                                                        <constraint firstAttribute="bottom" secondItem="G90-Tr-Rdn" secondAttribute="bottom" constant="21.5" id="tkf-Ok-cpZ"/>
+                                                        <constraint firstItem="G90-Tr-Rdn" firstAttribute="top" secondItem="Eh2-5I-yam" secondAttribute="bottom" constant="20" id="6Qb-zx-YqL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Eh2-5I-yam" secondAttribute="trailing" id="I6f-6y-04U"/>
+                                                        <constraint firstItem="Eh2-5I-yam" firstAttribute="leading" secondItem="AsD-Kb-Oj2" secondAttribute="leading" id="Oze-Gm-5hu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="G90-Tr-Rdn" secondAttribute="bottom" constant="20" id="cy5-9t-Baj"/>
+                                                        <constraint firstItem="Eh2-5I-yam" firstAttribute="top" secondItem="AsD-Kb-Oj2" secondAttribute="top" id="p3S-57-iXI"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -472,8 +505,8 @@
                                             <outlet property="userAddress" destination="jUO-ww-Gzn" id="UBC-0l-EBh"/>
                                             <outlet property="userCompany" destination="Twa-A1-DNa" id="A3I-kp-2s6"/>
                                             <outlet property="userEmail" destination="t78-nR-yUj" id="6QF-9I-gF8"/>
-                                            <outlet property="userGeoLocation" destination="xqD-sg-diJ" id="8Lp-qj-ju1"/>
-                                            <outlet property="userName" destination="oua-AN-DcK" id="qgK-jT-OEA"/>
+                                            <outlet property="userGeoLocation" destination="xqD-sg-diJ" id="xrT-4f-WmB"/>
+                                            <outlet property="userName" destination="oua-AN-DcK" id="xOk-lh-mx5"/>
                                             <outlet property="userPhone" destination="6uF-CD-yBR" id="kft-Us-FXs"/>
                                             <outlet property="userWebsite" destination="M3O-N8-Vlg" id="Q0V-xT-pbP"/>
                                         </connections>

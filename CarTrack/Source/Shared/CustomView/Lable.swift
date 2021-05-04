@@ -6,8 +6,10 @@
 //
 import UIKit
 class Label: UILabel {
-    public func loadData(_ text: String?, textColor: UIColor = UIColor.black, pointSize: CGFloat = 12, weight: UIFont.Weight = .regular) {
+    func loadData(_ text: String?, textColor: UIColor = UIColor.black, pointSize: CGFloat = 12, weight: UIFont.Weight = .regular) {
+        numberOfLines = 0
         font = UIFont.systemFont(ofSize: pointSize, weight: weight)
         self.text = text
+        self.textColor = textColor
     }
 }

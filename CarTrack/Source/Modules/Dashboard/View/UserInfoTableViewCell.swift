@@ -17,14 +17,13 @@ class UserInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        loadData()
     }
     func loadData() {
-        userName.loadData("Dr Strange", textColor: .black, pointSize: 13, weight: .regular)
-        userEmail.loadData("s@m.c", textColor: .black, pointSize: 13, weight: .regular)
-        userPhone.loadData("+7001222", textColor: .black, pointSize: 13, weight: .regular)
-        userWebsite.loadData("weasart.com", textColor: .black, pointSize: 13, weight: .regular)
-        userCompany.loadData("WEwqwq", textColor: .black, pointSize: 13, weight: .regular)
-        userAddress.loadData("qwqwqwqwqw qwqwqw qwqwq qwqwqw qwqwqw qwqwqwqwqwqwq", textColor: .black, pointSize: 13, weight: .regular)
+        userName.loadData("Dr Strange", textColor: .white, pointSize: 17, weight: .bold)
+        userEmail.loadData("s@m.c", textColor: .black, pointSize: 15, weight: .regular)
+        userPhone.loadData("+7001222", textColor: .black, pointSize: 15, weight: .regular)
+        userWebsite.loadData("weasart.com", textColor: .black, pointSize: 15, weight: .regular)
+        userCompany.loadData("WEwqwq", textColor: .black, pointSize: 15, weight: .regular)
+        userAddress.loadData("qwqwqwqwqw qwqwqw qwqwq qwqwqw qwqwqw qwqwqwqwqwqwq", textColor: .black, pointSize: 15, weight: .regular)
     }
 }

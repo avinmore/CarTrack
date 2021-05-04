@@ -23,6 +23,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         }
         tableView.backgroundColor = .clear
         cell.backgroundColor = .clear
+        cell.loadData()
         return cell
     }
 }
