@@ -53,6 +53,7 @@ class AuthenticationViewModel {
                 loginButtonStatus.append((isValid: false, type: .password))
             }
         case .selection:
+            loginButtonStatus = loginButtonStatus.filter({ $0.type != .selection})
             if let country = self.selectedCountry, !country.isEmpty {
                 loginButtonStatus.append((isValid: true, type: .selection))
             } else {
