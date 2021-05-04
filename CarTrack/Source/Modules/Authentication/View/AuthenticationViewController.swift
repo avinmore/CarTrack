@@ -57,11 +57,11 @@ class AuthenticationViewController: UIViewController {
         }
     }
     @IBAction func loginButtonTapped(_ sender: BaseButton) {
-        guard let dashboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuthenticationViewController") as? AuthenticationViewController else {
+        guard let dashboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController else {
             return
-        }        
+        }
+        AppDelegate.setRootController(UINavigationController(rootViewController: dashboard))
     }
-    
 }
 extension AuthenticationViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

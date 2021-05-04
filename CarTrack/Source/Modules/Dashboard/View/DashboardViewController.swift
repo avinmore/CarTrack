@@ -7,6 +7,10 @@
 import UIKit
 class DashboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.reloadData()
+    }
     
 }
 extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {

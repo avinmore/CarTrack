@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    static func setRootController(_ controller: UIViewController) {
+        if let presented = UIApplication.shared.windows.first?.rootViewController?.isBeingPresented, presented {
+            UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: nil)
+        }
+        UIApplication.shared.windows.first?.rootViewController = controller
+    }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
