@@ -21,6 +21,8 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoTableViewCell", for: indexPath) as? UserInfoTableViewCell else {
             return UITableViewCell()
         }
+        tableView.backgroundColor = .clear
+        cell.backgroundColor = .clear
         return cell
     }
 }

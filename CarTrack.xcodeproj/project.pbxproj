@@ -11,6 +11,7 @@
 		BC7F15142640DE3B00B615D7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15132640DE3B00B615D7 /* DashboardViewController.swift */; };
 		BC7F151A2640DE5500B615D7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15192640DE5500B615D7 /* DashboardViewModel.swift */; };
 		BC7F151E2640DFEC00B615D7 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F151D2640DFEC00B615D7 /* UserInfoTableViewCell.swift */; };
+		BC7F15222641072900B615D7 /* Lable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15212641072900B615D7 /* Lable.swift */; };
 		BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */; };
 		BCF47ACB263FE83100ACBC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF47AC9263FE83100ACBC4D /* Main.storyboard */; };
 		BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF47ACC263FE83100ACBC4D /* CarTrack.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 		BC7F15132640DE3B00B615D7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		BC7F15192640DE5500B615D7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		BC7F151D2640DFEC00B615D7 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		BC7F15212641072900B615D7 /* Lable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lable.swift; sourceTree = "<group>"; };
 		BCF47AC0263FE83100ACBC4D /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCF47ACA263FE83100ACBC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BCF47B1B263FF62100ACBC4D /* CustomShadowView.swift */,
 				BCF47B1F2640003800ACBC4D /* BaseButton.swift */,
 				BC7F150326402D0200B615D7 /* Textfiled.swift */,
+				BC7F15212641072900B615D7 /* Lable.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				BCF47B12263FEEEF00ACBC4D /* AuthenticationViewController.swift in Sources */,
 				BC7F151A2640DE5500B615D7 /* DashboardViewModel.swift in Sources */,
+				BC7F15222641072900B615D7 /* Lable.swift in Sources */,
 				BC7F15142640DE3B00B615D7 /* DashboardViewController.swift in Sources */,
 				BCF47B16263FEF3E00ACBC4D /* AuthenticationViewModel.swift in Sources */,
 				BC7F151E2640DFEC00B615D7 /* UserInfoTableViewCell.swift in Sources */,
