@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        DatabaseManager.createLoginUser()
         return true
+    }
+    static func setRootController(_ controller: UIViewController) {
+        if let presented = UIApplication.shared.windows.first?.rootViewController?.isBeingPresented, presented {
+            UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: nil)
+        }
+        UIApplication.shared.windows.first?.rootViewController = controller
     }
     // MARK: - Core Data stack
 

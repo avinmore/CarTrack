@@ -14,10 +14,14 @@ class AuthenticationViewController: UIViewController {
     @IBOutlet weak var userNameErrorText: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordErrorText: UILabel!
-    
+    @IBOutlet weak var containerView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        containerView.transformViewAnimation()
     }
     func configureUI() {
         loginActionButton.loadData("Login", buttonType: .submit, isDisabled: true, cornerRadius: 8)
@@ -27,6 +31,7 @@ class AuthenticationViewController: UIViewController {
                 return
             }
             self?.countryPickerTextField.text = country
+            self?.viewModel.selectedCountry = country
             self?.view.endEditing(true)
         }
         userNameTextField.delegate = self
@@ -36,6 +41,7 @@ class AuthenticationViewController: UIViewController {
         viewModel.updateLoginButtonStatus = { [weak self] results in
             self?.userNameErrorText.isHidden = true
             self?.passwordErrorText.isHidden = true
+            self?.loginActionButton.loadStatus(isDisabled: false)
             if !results.isEmpty {
                 DispatchQueue.main.async {
                     results.forEach { result in
@@ -44,10 +50,26 @@ class AuthenticationViewController: UIViewController {
                             self?.userNameErrorText.isHidden = result.isValid
                         case TextFiledType.password:
                             self?.passwordErrorText.isHidden = result.isValid
+                        case TextFiledType.selection: break
+                        }
+                        if !result.isValid || results.count != 3 {
+                            self?.loginActionButton.loadStatus(isDisabled: true)
                         }
                     }
                 }
             }
+        }
+    }
+    @IBAction func loginButtonTapped(_ sender: BaseButton) {
+        viewModel.performLogin { sucess, message in
+            guard sucess && message.isEmpty else {
+                Utility.showAlert("Failed to login!", message: message)
+                return
+            }
+            guard let dashboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as? DashboardViewController else {
+                return
+            }
+            AppDelegate.setRootController(UINavigationController(rootViewController: dashboard))
         }
     }
 }

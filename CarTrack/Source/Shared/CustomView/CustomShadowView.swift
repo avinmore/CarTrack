@@ -35,4 +35,13 @@ class CustomShadowView: UIView {
             layer.cornerRadius = cornerRadious
         }
     }
+    @IBInspectable var cropTop: CGFloat = 0 {
+        didSet {
+            if cropTop > 0 {
+                layer.cornerRadius = cropTop
+                layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            }
+        }
+        
+    }
 }
