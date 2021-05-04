@@ -20,7 +20,7 @@ class AuthenticationViewController: UIViewController {
         configureUI()
     }
     func configureUI() {
-        loginActionButton.loadData("Login", buttonType: .submit, isDisabled: true, cornerRadius: 8)
+        loginActionButton.loadData("Login", buttonType: .submit, isDisabled: false, cornerRadius: 8)
         countryPickerTextField.setCountryPickerView { [weak self] selectedCountry in
             guard let country = selectedCountry else {
                 self?.view.endEditing(true)
