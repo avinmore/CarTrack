@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BC7F150426402D0200B615D7 /* Textfiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F150326402D0200B615D7 /* Textfiled.swift */; };
+		BC7F15142640DE3B00B615D7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15132640DE3B00B615D7 /* DashboardViewController.swift */; };
+		BC7F151A2640DE5500B615D7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F15192640DE5500B615D7 /* DashboardViewModel.swift */; };
+		BC7F151E2640DFEC00B615D7 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7F151D2640DFEC00B615D7 /* UserInfoTableViewCell.swift */; };
 		BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */; };
-		BCF47AC8263FE83100ACBC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF47AC7263FE83100ACBC4D /* ViewController.swift */; };
 		BCF47ACB263FE83100ACBC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCF47AC9263FE83100ACBC4D /* Main.storyboard */; };
 		BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCF47ACC263FE83100ACBC4D /* CarTrack.xcdatamodeld */; };
 		BCF47AD0263FE83400ACBC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCF47ACF263FE83400ACBC4D /* Assets.xcassets */; };
@@ -34,9 +36,11 @@
 
 /* Begin PBXFileReference section */
 		BC7F150326402D0200B615D7 /* Textfiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfiled.swift; sourceTree = "<group>"; };
+		BC7F15132640DE3B00B615D7 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		BC7F15192640DE5500B615D7 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		BC7F151D2640DFEC00B615D7 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		BCF47AC0263FE83100ACBC4D /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCF47AC3263FE83100ACBC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCF47AC7263FE83100ACBC4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCF47ACA263FE83100ACBC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCF47ACD263FE83100ACBC4D /* CarTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarTrack.xcdatamodel; sourceTree = "<group>"; };
 		BCF47ACF263FE83400ACBC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +74,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC7F150F2640DDB900B615D7 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				BC7F15122640DDDE00B615D7 /* Model */,
+				BC7F15112640DDD800B615D7 /* View */,
+				BC7F15102640DDC500B615D7 /* ViewModel */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BC7F15102640DDC500B615D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC7F15192640DE5500B615D7 /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC7F15112640DDD800B615D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC7F15132640DE3B00B615D7 /* DashboardViewController.swift */,
+				BC7F151D2640DFEC00B615D7 /* UserInfoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC7F15122640DDDE00B615D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BCF47AB7263FE83100ACBC4D = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +169,7 @@
 		BCF47B04263FE8D500ACBC4D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BC7F150F2640DDB900B615D7 /* Dashboard */,
 				BCF47B05263FE8E000ACBC4D /* Authentication */,
 			);
 			path = Modules;
@@ -149,7 +188,6 @@
 		BCF47B06263FE8F700ACBC4D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BCF47AC7263FE83100ACBC4D /* ViewController.swift */,
 				BCF47B11263FEEEF00ACBC4D /* AuthenticationViewController.swift */,
 			);
 			path = View;
@@ -298,10 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF47B12263FEEEF00ACBC4D /* AuthenticationViewController.swift in Sources */,
+				BC7F151A2640DE5500B615D7 /* DashboardViewModel.swift in Sources */,
+				BC7F15142640DE3B00B615D7 /* DashboardViewController.swift in Sources */,
 				BCF47B16263FEF3E00ACBC4D /* AuthenticationViewModel.swift in Sources */,
+				BC7F151E2640DFEC00B615D7 /* UserInfoTableViewCell.swift in Sources */,
 				BCF47ACE263FE83100ACBC4D /* CarTrack.xcdatamodeld in Sources */,
 				BCF47B202640003800ACBC4D /* BaseButton.swift in Sources */,
-				BCF47AC8263FE83100ACBC4D /* ViewController.swift in Sources */,
 				BCF47AC4263FE83100ACBC4D /* AppDelegate.swift in Sources */,
 				BC7F150426402D0200B615D7 /* Textfiled.swift in Sources */,
 				BCF47B2526401B3400ACBC4D /* CountryListManager.swift in Sources */,
